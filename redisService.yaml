@@ -1,0 +1,9 @@
+id: redis-master
+kind: Service
+apiVersion: v1beta1
+selector:
+  app: redis
+containerPort: 6379
+protocol: TCP
+port: 6379
+createExternalLoadBalancer: true
