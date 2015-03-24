@@ -1,0 +1,22 @@
+{
+  "id": "web",
+  "kind": "Pod",
+  "apiVersion": "v1beta1",
+  "desiredState": {
+    "manifest": {
+      "version": "v1beta1",
+      "containers": [{
+        "name": "web",
+        "image": "clemble/web",
+        "ports": [{
+          "containerPort": 80,
+          "hostPort": 80
+        }],
+        "restartPolicy": {
+  			"always": {}
+		}
+      }]
+    }
+  },
+  "labels": { "app" : "web" }
+}
