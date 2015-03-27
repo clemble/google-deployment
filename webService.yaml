@@ -1,0 +1,11 @@
+id: web-service
+kind: Service
+apiVersion: v1beta1
+selector:
+  app: web
+containerPort: 80
+protocol: TCP
+port: 80
+publicIPs:
+  - "104.155.43.245"
+createExternalLoadBalancer: true
