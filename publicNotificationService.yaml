@@ -1,0 +1,9 @@
+id: public-notification
+kind: Service
+apiVersion: v1beta1
+selector:
+  app: public-notification
+containerPort: 5672
+protocol: TCP
+port: 5672
+createExternalLoadBalancer: true

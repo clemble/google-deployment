@@ -1,0 +1,16 @@
+id: public-notification
+kind: Pod
+apiVersion: v1beta1
+desiredState:
+  manifest:
+    version: v1beta1
+    containers:
+      - name: public-notification
+        image: clemble/rabbitmq
+        ports: 
+          - containerPort: 5672
+            hostPort: 5672
+          - containerPort: 15674
+            hostPort: 15674
+labels: 
+  app : public-notification

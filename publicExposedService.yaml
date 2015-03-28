@@ -1,0 +1,11 @@
+id: public-exposed-service
+kind: Service
+apiVersion: v1beta1
+selector:
+  app: public-notification
+containerPort: 15674
+protocol: TCP
+port: 15674
+publicIPs:
+  - "130.211.55.7"
+createExternalLoadBalancer: true
