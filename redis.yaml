@@ -10,5 +10,5 @@ desiredState:
         ports: 
           - containerPort: 6379
             hostPort: 6379
-  labels: 
-    app : redis
+labels: 
+  app : redis

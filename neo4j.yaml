@@ -1,0 +1,14 @@
+id: neo4j
+kind: Pod
+apiVersion: v1beta1
+desiredState:
+  manifest:
+    version: v1beta1
+    containers:
+      - name: neo4j
+        image: clemble/neo4j
+        ports: 
+          - containerPort: 7474
+            hostPort: 7474
+labels: 
+  app : neo4j

@@ -1,0 +1,9 @@
+id: neo4j-master
+kind: Service
+apiVersion: v1beta1
+selector:
+  app: neo4j
+containerPort: 7474
+protocol: TCP
+port: 7474
+createExternalLoadBalancer: true
