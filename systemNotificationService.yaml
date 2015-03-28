@@ -1,8 +1,8 @@
-id: rabbitmq-master
+id: system-notification
 kind: Service
 apiVersion: v1beta1
 selector:
-  app: rabbitmq
+  app: system-notification
 containerPort: 5672
 protocol: TCP
 port: 5672
