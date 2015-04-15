@@ -1,25 +1,25 @@
 kind: ReplicationController
-id: webv3
+id: bonus-v2
 apiVersion: v1beta1
 desiredState:
   replicas: 1
   replicaSelector:
-    name: web
-    version: v3
+    name: bonus
+    version: v2
   podTemplate:
     labels:
-      name : web
-      version: v3
+      name : bonus
+      version: v2
     desiredState:
       manifest:
         containers:
-          - name: web
-            image: clemble/web:latest
+          - name: bonus
+            image: clemble/bonus:latest
             imagePullPolicy : PullAlways
             ports:
-              - containerPort: 10001
-                hostPort: 10001
+              - containerPort: 10008
+                hostPort: 10008
                 protocol: TCP
             labels:
-              name : web
-              version: v3
+              name : bonus
+              version: v2

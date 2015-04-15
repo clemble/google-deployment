@@ -1,11 +1,11 @@
-id: web
+id: profile-service1
 kind: Service
 apiVersion: v1beta1
 selector:
-  name: web
-containerPort: 80
+  name: profile
+containerPort: 10012
 protocol: TCP
 port: 80
 publicIPs:
-  - "104.155.43.245"
+  - "104.155.68.75"
 createExternalLoadBalancer: true

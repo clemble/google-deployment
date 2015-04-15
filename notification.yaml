@@ -1,0 +1,25 @@
+kind: ReplicationController
+id: notification-v2
+apiVersion: v1beta1
+desiredState:
+  replicas: 1
+  replicaSelector:
+    name: notification
+    version: v2
+  podTemplate:
+    labels:
+      name : notification
+      version: v2
+    desiredState:
+      manifest:
+        containers:
+          - name: notification
+            image: clemble/notification:latest
+            imagePullPolicy : PullAlways
+            ports:
+              - containerPort: 10002
+                hostPort: 10002
+                protocol: TCP
+            labels:
+              name : notification
+              version: v2

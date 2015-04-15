@@ -1,11 +1,11 @@
-id: web
+id: notification
 kind: Service
 apiVersion: v1beta1
 selector:
-  name: web
-containerPort: 80
+  name: notification
+containerPort: 10002
 protocol: TCP
 port: 80
 publicIPs:
-  - "104.155.43.245"
+  - "104.155.65.73"
 createExternalLoadBalancer: true

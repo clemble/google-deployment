@@ -1,11 +1,11 @@
-id: web
+id: phone
 kind: Service
 apiVersion: v1beta1
 selector:
-  name: web
-containerPort: 80
+  name: phone
+containerPort: 10003
 protocol: TCP
 port: 80
 publicIPs:
-  - "104.155.43.245"
+  - "104.155.37.81"
 createExternalLoadBalancer: true

@@ -1,0 +1,25 @@
+kind: ReplicationController
+id: management-v2
+apiVersion: v1beta1
+desiredState:
+  replicas: 1
+  replicaSelector:
+    name: management
+    version: v2
+  podTemplate:
+    labels:
+      name : management
+      version: v2
+    desiredState:
+      manifest:
+        containers:
+          - name: management
+            image: clemble/management:latest
+            imagePullPolicy : PullAlways
+            ports:
+              - containerPort: 10006
+                hostPort: 10006
+                protocol: TCP
+            labels:
+              name : management
+              version: v2

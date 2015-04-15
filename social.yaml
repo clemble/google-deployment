@@ -1,0 +1,25 @@
+kind: ReplicationController
+id: social-v10
+apiVersion: v1beta1
+desiredState:
+  replicas: 1
+  replicaSelector: 
+    name: social
+    version: v10
+  podTemplate:
+    labels:
+      name : social
+      version: v10
+    desiredState:
+      manifest:
+        containers:
+          - name: social
+            image: clemble/social:latest
+            imagePullPolicy : PullAlways
+            ports:
+              - containerPort: 10014
+                hostPort: 10014
+                protocol: TCP
+            labels:
+              name : social
+              version: v10

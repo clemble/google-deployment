@@ -1,11 +1,11 @@
-id: web
+id: social
 kind: Service
 apiVersion: v1beta1
 selector:
-  name: web
-containerPort: 80
+  name: social
+containerPort: 10014
 protocol: TCP
 port: 80
 publicIPs:
-  - "104.155.43.245"
+  - "104.155.53.151"
 createExternalLoadBalancer: true

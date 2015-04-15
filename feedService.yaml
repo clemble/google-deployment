@@ -1,11 +1,11 @@
-id: web
+id: feed
 kind: Service
 apiVersion: v1beta1
 selector:
-  name: web
-containerPort: 80
+  name: feed
+containerPort: 10011
 protocol: TCP
 port: 80
 publicIPs:
-  - "104.155.43.245"
+  - "130.211.111.92"
 createExternalLoadBalancer: true

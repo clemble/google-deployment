@@ -1,25 +1,25 @@
 kind: ReplicationController
-id: webv3
+id: email-v2
 apiVersion: v1beta1
 desiredState:
   replicas: 1
   replicaSelector:
-    name: web
-    version: v3
+    name: email
+    version: v2
   podTemplate:
     labels:
-      name : web
-      version: v3
+      name : email
+      version: v2
     desiredState:
       manifest:
         containers:
-          - name: web
-            image: clemble/web:latest
+          - name: email
+            image: clemble/email:latest
             imagePullPolicy : PullAlways
             ports:
               - containerPort: 10001
                 hostPort: 10001
                 protocol: TCP
             labels:
-              name : web
-              version: v3
+              name : email
+              version: v2

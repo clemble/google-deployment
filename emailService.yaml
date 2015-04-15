@@ -1,11 +1,11 @@
-id: web
+id: email
 kind: Service
 apiVersion: v1beta1
 selector:
-  name: web
-containerPort: 80
+  name: email
+containerPort: 10001
 protocol: TCP
 port: 80
 publicIPs:
-  - "104.155.43.245"
+  - "104.155.78.199"
 createExternalLoadBalancer: true
