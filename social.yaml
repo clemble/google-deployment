@@ -1,15 +1,15 @@
 kind: ReplicationController
-id: social-v10
+id: social-v11
 apiVersion: v1beta1
 desiredState:
   replicas: 1
   replicaSelector: 
     name: social
-    version: v10
+    version: v11
   podTemplate:
     labels:
       name : social
-      version: v10
+      version: v11
     desiredState:
       manifest:
         containers:
@@ -22,4 +22,4 @@ desiredState:
                 protocol: TCP
             labels:
               name : social
-              version: v10
+              version: v11

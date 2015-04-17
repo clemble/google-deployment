@@ -1,15 +1,15 @@
 kind: ReplicationController
-id: registration-v4
+id: registration-v5
 apiVersion: v1beta1
 desiredState:
   replicas: 1
   replicaSelector: 
     name: registration
-    version: v4
+    version: v5
   podTemplate:
     labels:
       name : registration
-      version: v4
+      version: v5
     desiredState:
       manifest:
         containers:
@@ -22,4 +22,4 @@ desiredState:
                 protocol: TCP
             labels:
               name : registration
-              version: v4
+              version: v5

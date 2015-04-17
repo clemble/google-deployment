@@ -1,15 +1,15 @@
 kind: ReplicationController
-id: payment-v2
+id: payment-v3
 apiVersion: v1beta1
 desiredState:
   replicas: 1
   replicaSelector:
     name: payment
-    version: v2
+    version: v3
   podTemplate:
     labels:
       name : payment
-      version: v2
+      version: v3
     desiredState:
       manifest:
         containers:
@@ -22,4 +22,4 @@ desiredState:
                 protocol: TCP
             labels:
               name : payment
-              version: v2
+              version: v3

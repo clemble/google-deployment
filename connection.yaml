@@ -1,15 +1,15 @@
 kind: ReplicationController
-id: connection-v2
+id: connection-v3
 apiVersion: v1beta1
 desiredState:
   replicas: 1
   replicaSelector: 
     name: connection
-    version: v2
+    version: v3
   podTemplate:
     labels:
       name : connection
-      version: v2
+      version: v3
     desiredState:
       manifest:
         containers:
@@ -22,4 +22,4 @@ desiredState:
                 protocol: TCP
             labels:
               name : connection
-              version: v2
+              version: v3
